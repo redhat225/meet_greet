@@ -6,12 +6,12 @@ angular.module('mga.controllers',[])
 	.controller('HomeCtrl',['$scope','ArticleService','$log',function($scope,ArticleService,$log){
 		var self = this;
 		self.state = 'accueil';
-		ArticleService.all(self.state).then(function(response){
-			self.articles_wide_banner = response.data.articles_wide_banner;
-			$log.log(self.articles_wide_banner);
-		}, function(errResponse){
-			$log.log(errResponse);
-		});
+		// ArticleService.all(self.state).then(function(response){
+		// 	self.articles_wide_banner = response.data.articles_wide_banner;
+		// 	$log.log(self.articles_wide_banner);
+		// }, function(errResponse){
+		// 	$log.log(errResponse);
+		// });
 
 		angular.element('.slide_wide_banner_zone_1').slick({
 			autoplay:true,

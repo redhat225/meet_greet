@@ -2,7 +2,9 @@
 <!-- wide_banner area -->
 <div class="row center mg-margin-bottom-0  mg_sec_background_6">
     <div class="col s9 dtl31 none-box-shadow mg-padding-top-0 mg-padding-bottom-0 mg-padding-left-0 mg-padding-right-5">
-         <img ng-src="/img/assets/website/deposit/{{homectrl.articles_wide_banner.article_illustrations[0].illustration_path}}" style="width:100%;" alt="">
+     
+		  <?= $this->Html->image('/img/assets/website/deposit/0522517748418_wide_banner.jpg',['style'=>'width:100%;']) ?>
+	
           <div class="dtl">
              <h3>Lorem Ipsum</h3>
              <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
@@ -10,7 +12,7 @@
          </div>
     </div>
    
-		 <div class="col s3 center mg-margin-0 mg-padding-0 ">
+    <div class="col s3 center mg-margin-0 mg-padding-0 ">
 				<div class="slide_wide_banner_zone_1">
 				  <div>
 				       <figure class=" mg-margin-0 imghvr-zoom-out-left mg_sec_background_1">
@@ -20,10 +22,7 @@
 						     <h6>L'aventure Malienne est un compte de temps modernes inpspiré par des rhytmes comtemporains et un attachement fort aux racines du vieux baobab, afin de vous donner toute la saveur de la générosité africaine.</h6>
 						     <button class="btn white-text mg_sec_background_1" style="position: absolute;bottom: 0;left: 0;width: 100%;">En savoir plus</button>
 						  </figcaption>
-  					
 						</figure>
-					
-
 				  </div>
 				  <div>
 				  <figure class="mg-margin-0 imghvr-zoom-out-left mg_sec_background_1">
@@ -60,7 +59,6 @@
 			    <div class="alt_wide_banner_img mg-margin-0 hide">
 				    	<?= $this->html->image('assets/website/deposit/7.jpg',['style'=>'width:100%;']) ?>
 			    </div>
-
 		 </div>
 
 
