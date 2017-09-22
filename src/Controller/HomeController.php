@@ -18,6 +18,10 @@ class HomeController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
+        if(!$this->request->is('ajax'))
+        {
+            $this->request->params['action'] = 'index';
+        }
     }
 
     public function index(){
@@ -27,9 +31,41 @@ class HomeController extends AppController
         $this->set('_serialize',['title']);
     }
 
+    public function Contact(){
+        $title = "Contact";
+        
+        $this->set(compact('title'));
+        $this->set('_serialize',['title']);
+    }
 
     public function home(){
         
     }
+
+    public function wellbeing(){
+
+    }
+
+        public function career(){
+
+    }
+
+    public function business(){
+        
+    }
+
+    public function relationship(){
+        
+    }
+
+    public function inspiration(){
+        
+    }
+
+
+    public function finance(){
+        
+    }
+
 
 }

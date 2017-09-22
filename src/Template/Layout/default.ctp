@@ -28,7 +28,7 @@ $cakeDescription = 'Meet &amp; Greet Africa';
 
     <?= $this->fetch('meta') ?>
     <!-- Third Party dependencies -->
-    <?= $this->Html->css('../bower_components/materialize/dist/css/materialize.min') ?>
+    <?= $this->Html->css('../bower_components/materialize/dist/css/materialize') ?>
     <!-- Custom Css goes here -->
     <?= $this->Html->css('main') ?>
     <?= $this->Html->css('../js/slick-1.6.0/slick/slick') ?>
@@ -37,18 +37,23 @@ $cakeDescription = 'Meet &amp; Greet Africa';
     <?= $this->Html->css('animatism') ?>
     <?= $this->Html->css('../bower_components/hover/css/hover-min') ?>
     <?= $this->Html->css('../bower_components/imagehover.css/css/imagehover.min') ?>
+    <?= $this->Html->css('../bower_components/angular-rateit/dist/ng-rateit') ?>
+
     <?= $this->fetch('css') ?>
     
     <?= $this->Html->script('../bower_components/jquery/dist/jquery.min') ?>
 
     <?= $this->Html->script('../bower_components/angular/angular.min') ?>
+
+    <?= $this->Html->script('../bower_components/angular-rateit/dist/ng-rateit') ?>
+
     <?= $this->Html->script('../bower_components/materialize/dist/js/materialize.min') ?>
 
     <?= $this->Html->script('../bower_components/angular/angular-materialize.min') ?>
     <?= $this->Html->script('../bower_components/angular/angular-ui-router.min') ?>
     <?= $this->Html->script('slick-1.6.0/slick/slick.min') ?>
 
-   
+
 
     <?= $this->fetch('script') ?>
 
@@ -56,18 +61,27 @@ $cakeDescription = 'Meet &amp; Greet Africa';
     <base href="/">
 </head>
 <body ng-app="mga">
-    
-    <div ng-hide="$root.preloader" class="row center mg-margin-bottom-0" ui-view="navbar"></div>
+
+
+    <div ng-hide="$.preloader" class="row center mg-margin-bottom-0" ui-view="navbar"></div>
     <div ng-hide="$root.preloader" ui-view></div>
     <div ng-hide="$root.preloader" ui-view="footer"></div> 
     
     <!-- loader -->
-    <div ng-show="$root.preloader"  class="row center mg-padding-top-55 mg-margin-bottom-0" id="main_background_animate" style="padding-bottom: 100%; height: 1000px;">
+    <div ng-show="$root.preloader"  class="row center mg-padding-top-55 mg-margin-bottom-0">
         <div class="row center" style="position: relative;">
-             <div class="col s12 hide-on-large-only center" style="position: fixed;top:28%;padding-bottom: 100%;">   <?= $this->Html->image('assets/basic_assets/meet_greet_original.png',['style'=>'width:80%;'])  ?>
+             <div class="col s12 center" style="margin-top: 15%;">  <?= $this->Html->image('assets/basic_assets/meet_greet_original.png',['style'=>'width:200px;'])  ?>
              </div>
-             <div class="col s12 hide-on-med-and-down center" style="position: fixed;top:20%;padding-bottom: 100%;">   <?= $this->Html->image('assets/basic_assets/meet_greet_original.png',['style'=>'width:50%;'])  ?>
+             <div class="container">
+                 <div class="container">
+                    <div class="container">
+                       <div class="progress mg_prim_background">
+                          <div class="indeterminate mg_sec_background_1"></div>
+                       </div>
+                    </div>
+                 </div>
              </div>
+
         </div>           
     </div>
     <!-- Angular App -->
@@ -76,6 +90,5 @@ $cakeDescription = 'Meet &amp; Greet Africa';
     <?= $this->Html->script('Red/services') ?>
 
     <!-- Additional dependencies -->
-
 </body>
 </html>

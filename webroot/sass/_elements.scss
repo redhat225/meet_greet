@@ -3,7 +3,6 @@
 }
 
 
-
 .pointer{
 	cursor:pointer;
 }
@@ -177,3 +176,106 @@ ul#slide-out li.menu{
    cursor: pointer;
   
  }
+
+ // Extra Grid
+ @media only screen and (max-width: 600px) {
+  .side-small-ads{
+    width: 50%;
+  }
+  .wide-banner-ads{
+  	width: 100%;
+  	display: block;
+  }
+
+  .wide-banner-title{
+  	width:150%;
+  }
+
+  .text-origin-ltr{
+	text-align:left;
+  }
+
+  .content-origin-ltr{
+  	float: left;
+  }
+
+    .side-large-ads{
+    width: 40%;
+  }
+
+
+}
+
+
+ @media only screen and (min-width: 601px) {
+  .text-origin-ltr{
+	text-align:right;
+  }
+
+  .content-origin-ltr{
+  	float: right;
+  }
+
+  .wide-banner-ads{
+  	width: 50%;
+  	display: block;
+  	margin-left:25%;
+  }
+}
+
+ @media only screen and (min-width: 601px) and (max-width: 992px) {
+  .side-small-ads{
+    width: 35%;
+  }
+
+  .wide-banner-title{
+  	width:130%;
+  }
+
+    .side-large-ads{
+    width: 35%;
+  }
+
+
+}
+
+
+ @media only screen and (max-width: 992px) {
+	.footer-left-contact{
+		padding-right: 0px;
+	}
+
+
+
+}
+
+
+
+ @media only screen and (min-width: 993px) {
+  .side-small-ads{
+    width: 90%;
+  }
+   .wide-banner-title{
+  	width:100%;
+
+  }
+
+  	.footer-left-contact{
+		padding-right: 76px !important;
+	}
+}
+
+ @media only screen and (min-width: 993px) and (max-width: 1214px) {
+.side_static_ads{
+	width:250px;
+}
+}
+
+
+
+
+
+
+
+
+

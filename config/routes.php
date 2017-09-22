@@ -43,8 +43,15 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 Router::extensions(['json','xml','pdf']);
+
 Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/bienetre', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/carierre', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/business', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/relation', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/inspiration', ['controller' => 'Home', 'action' => 'index']);
+    $routes->connect('/finance', ['controller' => 'Home', 'action' => 'index']);
     $routes->fallbacks(DashedRoute::class);
 });
 
